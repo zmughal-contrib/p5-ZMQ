@@ -21,6 +21,9 @@ P5ZMQ3_zmq_getsockopt_int(P5ZMQ3_Socket *sock, int option) {
 
     len = sizeof(i32);
     status = zmq_getsockopt(sock->socket, option, &i32, &len);
+	printf("sizeof SOCKET: %d\n", sizeof(SOCKET));
+	printf("sizeof I32: %d\n", sizeof(I32));
+	printf("got int: %d\n", i32);
     if(status == 0) {
         sv_setiv(sv, i32);
     } else {

@@ -413,7 +413,7 @@ set_sockopt_type(
         ZMQ_RCVTIMEO,
         ZMQ_SNDTIMEO,
         ZMQ_IPV4ONLY,
-        ZMQ_FD, # SOCKET on Windows... yikes, how do we handle this?
+	#ZMQ_FD, # SOCKET on Windows... yikes, how do we handle this?
         ZMQ_EVENTS,
         ZMQ_BACKLOG,
         ZMQ_FAIL_UNROUTABLE,
@@ -465,6 +465,7 @@ set_sockopt_type(
 set_sockopt_type(
     "uint64" => (
         ZMQ_AFFINITY,
+	ZMQ_FD, # SOCKET on Windows... yikes, how do we handle this?
         ZMQ_HWM,
         ZMQ_VMCI_BUFFER_SIZE,
         ZMQ_VMCI_BUFFER_MIN_SIZE,
